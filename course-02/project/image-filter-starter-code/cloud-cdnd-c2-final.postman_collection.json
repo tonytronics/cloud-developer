@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "4bcf1909-8996-44b7-be35-b130ab03d12f",
+		"_postman_id": "a7cb7043-02d8-499f-b7db-91d34b454523",
 		"name": "cloud-cdnd-c2-final",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -26,6 +26,31 @@
 						}
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/filteredimage?image_url=https://variety.com/wp-content/uploads/2015/07/naruto_movie-lionsgate.jpg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{HOST}}/filteredimage?image_url=https://variety.com/wp-content/uploads/2015/07/naruto_movie-lionsgate.jpg",
+					"protocol": "http",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"filteredimage"
+					],
+					"query": [
+						{
+							"key": "image_url",
+							"value": "https://variety.com/wp-content/uploads/2015/07/naruto_movie-lionsgate.jpg"
+						}
+					]
+				},
+				"description": "Valid image retrieval"
 			},
 			"response": []
 		}
@@ -54,10 +79,11 @@
 	],
 	"variable": [
 		{
-			"id": "1df3d31a-de30-494b-a3d0-f1228dd8713c",
+			"id": "c95cb60c-0ed0-4fae-b04a-bc84449703de",
 			"key": "HOST",
-			"value": "localhost:8082",
+			"value": "image-filter-okusanya-dev.us-east-1.elasticbeanstalk.com",
 			"type": "string"
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }

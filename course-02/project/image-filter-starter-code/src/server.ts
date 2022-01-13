@@ -53,7 +53,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
         })
         .catch(error => {
           console.error(`Error: Unable to process image ${image_url}`);
-          return res.status(404).send(`Error unable to filter image ${image_url}`);
+          return res.status(422).send(`Error filtering image ${image_url}`);
         })
   } );
   //! END @TODO1
